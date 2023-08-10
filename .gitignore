@@ -1,0 +1,17 @@
+# IDE
+.env
+.idea
+.vscode
+.Ds_Store
+
+# foundy test
+forge-cache
+out
+
+# node
+node_modules
+
+# hardhat
+artifacts
+cache
+coverage
