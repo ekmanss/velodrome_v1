@@ -8,6 +8,10 @@ import "./utils/TestToken.sol";
 import "contracts/factories/PairFactory.sol";
 import "contracts/Router.sol";
 import "contracts/VelodromeLibrary.sol";
+import "contracts/factories/BribeFactory.sol";
+import "contracts/factories/GaugeFactory.sol";
+import "contracts/Voter.sol";
+import "contracts/VeArtProxy.sol";
 
 
 
@@ -112,6 +116,12 @@ abstract contract BaseTest is Test, TestOwner {
         TestOwner(_owner).transfer(address(USDC), address(pair), USDC_1);
         TestOwner(_owner).transfer(address(FRAX), address(pair), TOKEN_1);
         TestOwner(_owner).mint(address(pair), _owner);
+    }
+
+    function mintVelo(address[] memory _accounts, uint256[] memory _amounts) public {
+        for (uint256 i = 0; i < _amounts.length; i++) {
+            VELO.mint(_accounts[i], _amounts[i]);
+        }
     }
 
 }
