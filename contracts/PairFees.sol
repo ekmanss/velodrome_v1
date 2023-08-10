@@ -2,7 +2,7 @@
 pragma solidity 0.8.13;
 
 import 'contracts/interfaces/IERC20.sol';
-import {PairFactory} from 'contracts/PairFactory.sol';
+import {PairFactory} from "./factories/PairFactory.sol";
 
 // Pair Fees contract is used as a 1:1 pair relationship to split out fees, this ensures that the curve does not need to be modified for LP shares
 contract PairFees {

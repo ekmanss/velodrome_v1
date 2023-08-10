@@ -3,3 +3,4 @@ forge-std/=lib/forge-std/src/
 @openzeppelin/=lib/openzeppelin-contracts/
 openzeppelin-contracts=lib/openzeppelin-contracts/
 LayerZero/=lib/LayerZero/contracts/
+solmate/=lib/solmate/src/
